@@ -20,7 +20,6 @@ struct ContentView: View {
             
             Button("Authenticate Local Auth") {
                 authenticate()
-//                authenticateWithKeychain()
             }
             
             Button("Create pass auth with keychain") {
@@ -79,12 +78,12 @@ struct ContentView: View {
         ]
         let status = SecItemDelete(query as CFDictionary)
 
-        print(status,"<< status")
         
         if status == errSecSuccess {
             text = "Previous entry deleted"
         }
         // Create a password to store in the keychain
+        // I am lazy so I just put it plain text here. Don't do this in real code.
         let password = "MyPassword".data(using: .utf8)!
         let queryPass: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
@@ -151,7 +150,7 @@ struct ContentView: View {
         var item: CFTypeRef?
         let status = SecItemCopyMatching(query as CFDictionary, &item)
 
-        print(status,"<< status read keychain")
+       
         // Check the result of the keychain operation
         if status == errSecSuccess {
             let passwordData = item as! Data
