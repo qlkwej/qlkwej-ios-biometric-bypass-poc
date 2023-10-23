@@ -4,6 +4,10 @@ This demo app to show how biometric authentication can be bypassed using Objecti
 
 More details on how Objection bypasses authentication can be found in these links: [here](https://github.com/sensepost/objection/wiki/Understanding-the-iOS-Biometrics-Bypass) and [here](https://github.com/sensepost/objection/issues/136#issuecomment-419664574).
 
+
+https://github.com/qlkwej/qlkwej-ios-biometric-bypass-poc/assets/25258929/887be0d1-f821-490d-90c5-8fc9e502caca
+
+
 # Shoutouts
 This project can't be done without the help from the following people/resource:
 - https://www.youtube.com/watch?v=8MLdq9kotII
